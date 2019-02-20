@@ -23,6 +23,7 @@ import {
   getHeight,
   Font
 } from "../global/util";
+import OrWithComponent from "./../components/orWithComponent";
 
 export default class RegisterationComponent extends Component {
 
@@ -35,55 +36,15 @@ export default class RegisterationComponent extends Component {
     super(props);
   }
 
-  componentDidMount(){
-    let {height, width} = Dimensions.get('window');
-    this.setState({
-      height : height, 
-      width : width
-    });
-  }
-
   render() {
     return (
       <React.Fragment>
-         <View style={{
+        <OrWithComponent/>
+        { this.props.screenType !== "forgotPassword" && (
+           <View style={{
             width : "100%",
             flexDirection : "row",
-            marginBottom : getHeight(2)
-          }}>
-            <View style={{
-              width : "40%",
-              justifyContent : "center"
-            }}>
-              <View style={{
-                borderColor : Color.themeFontColor,
-                borderWidth : 1
-              }}/>
-            </View>
-              <Text style={{
-                fontFamily: 'AvenirNext-Bold',
-                fontSize: getFont(16),
-                paddingHorizontal: 5,
-                alignSelf: 'center',
-                color: Color.themeFontColor
-              }}>
-                OR WITH
-              </Text>
-            <View style={{
-              width : "40%",
-              justifyContent : "center"
-            }}>
-              <View style={{
-                borderColor : Color.themeFontColor,
-                borderWidth : 1
-              }}/>
-            </View>
-          </View>
-          <View style={{
-            width : "100%",
-            flexDirection : "row",
-            height : getHeight(6),
-            marginBottom : getHeight(6)
+            height : getHeight(6)
           }}>
               <TouchableOpacity style={{
                 width : "49%",
@@ -120,11 +81,14 @@ export default class RegisterationComponent extends Component {
                 }}>Google</Text>
               </TouchableOpacity>
           </View>
+          )  
+        }
           <View style={{
             width : "100%",
             flexDirection : "row",
             height : getHeight(6),
-            justifyContent : "center"
+            justifyContent : "center",
+            marginTop : getHeight(6)
           }}>
             <Text style={{
               color : Color.themeFontColor,

@@ -16,11 +16,12 @@ import ItemList from "./pages/ItemList";
 import Cart from "./pages/cart";
 import SplashScreen from "./pages/splashScreen";
 import RegisterationComponent from "./pages/registeration";
+import ForgotPassword from "./pages/forgotPassword";
 
 export default class App extends Component {
 
   state = {
-    screen : "registeration"
+    screen : "forgotPassword"
   }
 
   moveToScreen = (screen) => {
@@ -31,6 +32,7 @@ export default class App extends Component {
 
   getScreen = (screen) => {
      switch(screen){
+       case 'forgotPassword': return <ForgotPassword moveToScreen={this.moveToScreen}/>;
        case 'registeration': return <RegisterationComponent moveToScreen={this.moveToScreen}/>;
        case "splashScreen": return <SplashScreen moveToScreen={this.moveToScreen}/>;
        case "login" : return <Login moveToScreen={this.moveToScreen}/>;

@@ -25,6 +25,7 @@ import {
 } from "../global/util";
 import LoginFormComponent from '../components/loginFormComponent';
 import RegisterationComponent from "../components/registerationComponent";
+import ImageLogoComponent from "./../components/imageLogoComponent";
 
 export default class Registeration extends Component {
 
@@ -56,16 +57,7 @@ export default class Registeration extends Component {
       }}>
         <KeyboardAvoidingView behavior={Platform.select({android: "padding", ios: 'padding'})}
          enabled>
-         <View style={{
-           height : getHeight(16),
-           width : "100%",
-           justifyContent : "center",
-           alignItems : "center"
-         }}>
-            <Image source={require("./../images/home_icon.jpg")}
-                    style={{flex : 1}}
-                    resizeMode = "contain"/>
-         </View>
+         <ImageLogoComponent/>
           <LoginFormComponent screenType="registeration"/>
           <RegisterationComponent screenType="registeration"/>
         </KeyboardAvoidingView>
