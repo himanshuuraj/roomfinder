@@ -15,11 +15,12 @@ import Options from "./pages/options";
 import ItemList from "./pages/ItemList";
 import Cart from "./pages/cart";
 import SplashScreen from "./pages/splashScreen";
+import RegisterationComponent from "./pages/registeration";
 
 export default class App extends Component {
 
   state = {
-    screen : "login"
+    screen : "registeration"
   }
 
   moveToScreen = (screen) => {
@@ -30,6 +31,7 @@ export default class App extends Component {
 
   getScreen = (screen) => {
      switch(screen){
+       case 'registeration': return <RegisterationComponent moveToScreen={this.moveToScreen}/>;
        case "splashScreen": return <SplashScreen moveToScreen={this.moveToScreen}/>;
        case "login" : return <Login moveToScreen={this.moveToScreen}/>;
        case "cart" : return <Cart moveToScreen={this.moveToScreen}/>;

@@ -22,11 +22,11 @@ import {
   Color,
   getHeight,
   Font
-} from "./../global/util";
-import LoginFormComponent from './../components/loginFormComponent';
-import RegisterationComponent from "./../components/registerationComponent";
+} from "../global/util";
+import LoginFormComponent from '../components/loginFormComponent';
+import RegisterationComponent from "../components/registerationComponent";
 
-export default class AnimationButton extends Component {
+export default class Registeration extends Component {
 
   state = {
     phone : "",
@@ -66,8 +66,8 @@ export default class AnimationButton extends Component {
                     style={{flex : 1}}
                     resizeMode = "contain"/>
          </View>
-          <LoginFormComponent screenType="login"/>
-          <RegisterationComponent screenType="login"/>
+          <LoginFormComponent screenType="registeration"/>
+          <RegisterationComponent screenType="registeration"/>
         </KeyboardAvoidingView>
       </Content>
       </Container>
