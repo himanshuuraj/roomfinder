@@ -39,6 +39,10 @@ export default class ForgotPassword extends Component {
     super(props);
   }
 
+  componentDidMount(){
+    setTimeout(() => this.props.moveToScreen("verifyMobileNumber"), 5000);
+  }
+
   render() {
     return (
         <Container>
@@ -86,7 +90,8 @@ export default class ForgotPassword extends Component {
                 borderRadius : 5,
                 borderColor : "white",
                 paddingLeft : 10,
-                flexDirection : "row"
+                flexDirection : "row",
+                alignItems : "center"
               }}>
               <Icon name="ios-mail" 
                  style={{
@@ -123,7 +128,8 @@ export default class ForgotPassword extends Component {
                 borderRadius : 5,
                 borderColor : "white",
                 paddingLeft : 10,
-                flexDirection : "row"
+                flexDirection : "row",
+                alignItems : "center"
               }}>
               <Icon name="ios-phone-portrait" 
                  style={{

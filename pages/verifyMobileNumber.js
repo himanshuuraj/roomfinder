@@ -36,6 +36,10 @@ export default class VerifyMobileNumber extends Component {
     super(props);
   }
 
+  componentDidMount(){
+    setTimeout(() => this.props.moveToScreen("splashScreen"), 5000);
+  }
+
   render() {
     return (
       <Container>

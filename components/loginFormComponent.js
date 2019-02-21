@@ -89,7 +89,8 @@ export default class LoginFormComponent extends Component {
                 borderRadius : 5,
                 borderColor : "white",
                 paddingLeft : 10,
-                flexDirection : "row"
+                flexDirection : "row",
+                alignItems : "center"
               }}>
               <Icon name="ios-person" 
                  style={{
@@ -125,7 +126,8 @@ export default class LoginFormComponent extends Component {
                 borderRadius : 5,
                 borderColor : "white",
                 paddingLeft : 10,
-                flexDirection : "row"
+                flexDirection : "row",
+                alignItems : "center"
               }}>
               <TextInput placeholder="Last Name"
               placeholderTextColor = { Color.themeFontColor }
@@ -183,7 +185,8 @@ export default class LoginFormComponent extends Component {
                 borderRadius : 5,
                 borderColor : "white",
                 paddingLeft : 10,
-                flexDirection : "row"
+                flexDirection : "row",
+                alignItems : "center"
               }}>
               <Icon name="ios-mail" 
                  style={{
@@ -219,7 +222,8 @@ export default class LoginFormComponent extends Component {
                 borderRadius : 5,
                 borderColor : "white",
                 paddingLeft : 10,
-                flexDirection : "row"
+                flexDirection : "row",
+                alignItems : "center"
               }}>
               <Icon name="ios-lock" 
                  style={{

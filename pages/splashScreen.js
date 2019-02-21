@@ -26,8 +26,7 @@ export default class SplashScreen extends Component {
   }
 
   componentDidMount(){
-    setTimeout(() => this.props.moveToScreen("options"), 3000);
-    //this.props.moveToScreen("login");
+    setTimeout(() => this.props.moveToScreen("login"), 5000);
   }
 
   render() {

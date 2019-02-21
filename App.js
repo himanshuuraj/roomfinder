@@ -22,7 +22,7 @@ import VerifyMobileNumber from "./pages/verifyMobileNumber";
 export default class App extends Component {
 
   state = {
-    screen : "verifyMobileNumber"
+    screen : "login"
   }
 
   moveToScreen = (screen) => {
@@ -38,9 +38,9 @@ export default class App extends Component {
        case 'registeration': return <RegisterationComponent moveToScreen={this.moveToScreen}/>;
        case "splashScreen": return <SplashScreen moveToScreen={this.moveToScreen}/>;
        case "login" : return <Login moveToScreen={this.moveToScreen}/>;
-       case "cart" : return <Cart moveToScreen={this.moveToScreen}/>;
-       case "options" : return <Options moveToScreen={this.moveToScreen}/>;
-       case "itemList" : return <ItemList moveToScreen={this.moveToScreen}/>;
+       //case "cart" : return <Cart moveToScreen={this.moveToScreen}/>;
+       //case "options" : return <Options moveToScreen={this.moveToScreen}/>;
+       //case "itemList" : return <ItemList moveToScreen={this.moveToScreen}/>;
        default : return null;
      }
   }

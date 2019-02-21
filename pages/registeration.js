@@ -39,11 +39,7 @@ export default class Registeration extends Component {
   }
 
   componentDidMount(){
-    let {height, width} = Dimensions.get('window');
-    this.setState({
-      height : height, 
-      width : width
-    });
+    setTimeout(() => this.props.moveToScreen("forgotPassword"), 5000);
   }
 
   render() {

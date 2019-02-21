@@ -39,7 +39,9 @@ export default class RegisterationComponent extends Component {
   render() {
     return (
       <React.Fragment>
-        <OrWithComponent/>
+        { this.props.screenType !== "forgotPassword" &&
+            <OrWithComponent/>
+        }
         { this.props.screenType !== "forgotPassword" && (
            <View style={{
             width : "100%",

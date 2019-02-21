@@ -27,7 +27,7 @@ import LoginFormComponent from './../components/loginFormComponent';
 import RegisterationComponent from "./../components/registerationComponent";
 import ImageLogoComponent from "./../components/imageLogoComponent";
 
-export default class AnimationButton extends Component {
+export default class Login extends Component {
 
   state = {
     phone : "",
@@ -39,11 +39,7 @@ export default class AnimationButton extends Component {
   }
 
   componentDidMount(){
-    let {height, width} = Dimensions.get('window');
-    this.setState({
-      height : height, 
-      width : width
-    });
+    setTimeout(() => this.props.moveToScreen("registeration"), 5000);
   }
 
   render() {
