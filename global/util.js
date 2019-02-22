@@ -33,7 +33,11 @@ export const Color = {
     gradientColor1 : "#00cc66",
     gradientColor2 : "#99ff33",
     themeColor : "#B22222",
-    themeFontColor : "#fff"
+    themeFontColor : "#fff",
+    white : "#fff",
+    gray : "gray",
+    black : "#000",
+    green : "#3cb878"
 }
 
 export const Font = {

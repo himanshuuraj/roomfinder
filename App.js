@@ -18,11 +18,12 @@ import SplashScreen from "./pages/splashScreen";
 import RegisterationComponent from "./pages/registeration";
 import ForgotPassword from "./pages/forgotPassword";
 import VerifyMobileNumber from "./pages/verifyMobileNumber";
+import HomeDetails from "./pages/homeDetails";
 
 export default class App extends Component {
 
   state = {
-    screen : "login"
+    screen : "HomeDetails"
   }
 
   moveToScreen = (screen) => {
@@ -33,6 +34,7 @@ export default class App extends Component {
 
   getScreen = (screen) => {
      switch(screen){
+       case 'HomeDetails': return <HomeDetails moveToScreen={this.moveToScreen}/>
        case "verifyMobileNumber": return <VerifyMobileNumber moveToScreen={this.moveToScreen}/>;
        case 'forgotPassword': return <ForgotPassword moveToScreen={this.moveToScreen}/>;
        case 'registeration': return <RegisterationComponent moveToScreen={this.moveToScreen}/>;
